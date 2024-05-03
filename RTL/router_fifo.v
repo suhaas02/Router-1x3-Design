@@ -132,7 +132,7 @@ always@(posedge clock)
             begin 
                 for(i = 0; i < 16; i = i + 1)
                     begin 
-                        mem[i] <= 0;
+                        mem[i] <=9'b0;
                     end
                 wr_ptr <= 4'b0;
             end 
@@ -140,7 +140,7 @@ always@(posedge clock)
             begin 
                 for(i = 0; i < 16; i = i + 1)
                     begin 
-                        mem[i] <= 0;
+                        mem[i] <= 9'b0;
                     end
                 wr_ptr <= 4'b0;
             end 
@@ -161,23 +161,26 @@ always@(posedge clock)
     begin 
         if(!resetn)
             begin 
-                rd_ptr <= 1'b0;
+                rd_ptr <= 4'b0;
                 data_out <= 8'd0;
             end
         else if(soft_reset)
             begin 
                 data_out <= 8'd0;
-                rd_ptr <= 1'b0;
+                rd_ptr <= 4'b0;
             end 
-        else if(count == 0)
+         else if(read_enb == 1'b1 && empty == 1'b0)
+            begin 
+                data_out <= mem[rd_ptr[3:0]][7:0];
+                rd_ptr <= rd_ptr + 1'b1;
+            end
+      else if(count ==7'b0)
             begin
                 data_out <= 8'bz;
             end
-        else if(read_enb == 1'b1 && empty == 1'b0)
-            begin 
-                data_out <= mem[rd_ptr][7:0];
-                rd_ptr <= rd_ptr + 1'b1;
-            end
+     else if(empty)
+     data_out <= 8'bz;
+
         else    
             rd_ptr <= rd_ptr;
         
@@ -199,17 +202,12 @@ always@(posedge clock)
                     begin 
                         count <= mem[rd_ptr[3:0]][7:2] + 1'b1;
                     end
-                else if(count != 0)
+                else if(count != 6'b0)
                     count <= count - 1'b1;
+     else 
+       count <= count;
             end 
-    end 
-
-             
-
-
-
-
-//full and empty conditions
-assign empty = (wr_ptr == rd_ptr) ? 1'b1 : 1'b0;
-assign full = (wr_ptr == 4'b1111 && rd_ptr == 4'b0) ? 1'b1 : 1'b0;
-endmodule
+  else 
+       count <= count;
+    
+    end
