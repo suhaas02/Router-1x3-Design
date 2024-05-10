@@ -24,7 +24,7 @@ reg [1:0]address;
 always@(posedge clock)
     begin 
         if(!resetn)
-            address <= 2'b00;
+            address <= 2'bzz;
         else
             address <= data_in; 
     end
@@ -34,7 +34,7 @@ always@(posedge clock)
     begin 
         if(!resetn)
             state <= DECODE_ADDRESS; 
-        else if(soft_reset_0 || soft_reset_1 || soft_reset_2)   
+        else if(soft_reset_0 && address == 2'b00 || soft_reset_1 && address == 2'b01|| soft_reset_2 && address == 2'b10)   
             state <= DECODE_ADDRESS; 
         else 
             state <= next_state; 
@@ -98,13 +98,12 @@ always@(*)
                                 begin 
                                     if(!fifo_full)
                                         next_state <= DECODE_ADDRESS; 
-                                    else
+                                    else if(fifo_full)
                                         next_state <= FIFO_FULL_STATE;
                                 end 
                                 
             WAIT_TILL_EMPTY : 
                             begin 
-                                //why to take the temporary variable here ? 
                                 if((fifo_empty_0 && address ==  2'b00) || (fifo_empty_1 && address ==  2'b01) ||
                                 (fifo_empty_2 && address ==  2'b10))
                                     next_state <= LOAD_FIRST_DATA;

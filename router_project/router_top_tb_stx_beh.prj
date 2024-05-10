@@ -1,0 +1,7 @@
+verilog isim_temp "../RTL/router_sync.v"
+verilog isim_temp "../RTL/router_reg.v"
+verilog isim_temp "../RTL/router_fsm.v"
+verilog isim_temp "../RTL/router_fifo.v"
+verilog isim_temp "../RTL/router_top.v"
+verilog isim_temp "../TB/router_top_tb.v"
+verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,452 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: router_fifo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "router_fifo.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "router_fifo"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : router_fifo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/RTL/router_fifo.v" into library work
+Parsing module <router_fifo>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <router_fifo>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <router_fifo>.
+    Related source file is "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/RTL/router_fifo.v".
+    Found 5-bit register for signal <wr_ptr>.
+    Found 5-bit register for signal <rd_ptr>.
+    Found 8-bit register for signal <data_out[7]_dff_45_OUT>.
+    Found 1-bit register for signal <resetn_clock_DFF_158>.
+    Found 1-bit register for signal <resetn_clock_DFF_159>.
+    Found 1-bit register for signal <resetn_clock_DFF_160>.
+    Found 1-bit register for signal <resetn_clock_DFF_161>.
+    Found 1-bit register for signal <resetn_clock_DFF_162>.
+    Found 1-bit register for signal <resetn_clock_DFF_163>.
+    Found 1-bit register for signal <resetn_clock_DFF_164>.
+    Found 1-bit register for signal <resetn_clock_DFF_165>.
+    Found 7-bit register for signal <count>.
+    Found 144-bit register for signal <n0124[143:0]>.
+    Found 7-bit subtractor for signal <count[6]_GND_1_o_sub_55_OUT> created at line 313.
+    Found 5-bit adder for signal <wr_ptr[4]_GND_1_o_add_21_OUT> created at line 257.
+    Found 5-bit adder for signal <rd_ptr[4]_GND_1_o_add_34_OUT> created at line 282.
+    Found 7-bit adder for signal <n0187> created at line 310.
+    Found 8-bit 16-to-1 multiplexer for signal <data_out[7]_rd_ptr[3]_mux_38_OUT[7:0]> created at line 281.
+    Found 1-bit 16-to-1 multiplexer for signal <GND_1_o_GND_1_o_equal_51_o> created at line 308.
+    Found 6-bit 16-to-1 multiplexer for signal <rd_ptr[3]_mem[15][7]_wide_mux_51_OUT> created at line 310.
+    Found 1-bit tristate buffer for signal <data_out<7>> created at line 267
+    Found 1-bit tristate buffer for signal <data_out<6>> created at line 267
+    Found 1-bit tristate buffer for signal <data_out<5>> created at line 267
+    Found 1-bit tristate buffer for signal <data_out<4>> created at line 267
+    Found 1-bit tristate buffer for signal <data_out<3>> created at line 267
+    Found 1-bit tristate buffer for signal <data_out<2>> created at line 267
+    Found 1-bit tristate buffer for signal <data_out<1>> created at line 267
+    Found 1-bit tristate buffer for signal <data_out<0>> created at line 267
+    Found 5-bit comparator lessequal for signal <n0004> created at line 256
+    Found 5-bit comparator equal for signal <empty> created at line 323
+    Found 1-bit comparator not equal for signal <n0116> created at line 324
+    Found 4-bit comparator equal for signal <wr_ptr[3]_rd_ptr[3]_equal_64_o> created at line 324
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 177 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  21 Multiplexer(s).
+	inferred   8 Tristate(s).
+Unit <router_fifo> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 5-bit adder                                           : 2
+ 7-bit addsub                                          : 1
+# Registers                                            : 13
+ 1-bit register                                        : 8
+ 144-bit register                                      : 1
+ 5-bit register                                        : 2
+ 7-bit register                                        : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 4
+ 1-bit comparator not equal                            : 1
+ 4-bit comparator equal                                : 1
+ 5-bit comparator equal                                : 1
+ 5-bit comparator lessequal                            : 1
+# Multiplexers                                         : 21
+ 1-bit 16-to-1 multiplexer                             : 1
+ 6-bit 16-to-1 multiplexer                             : 1
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 16-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 16
+# Tristates                                            : 8
+ 1-bit tristate buffer                                 : 8
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <router_fifo>.
+The following registers are absorbed into counter <wr_ptr>: 1 register on signal <wr_ptr>.
+The following registers are absorbed into counter <rd_ptr>: 1 register on signal <rd_ptr>.
+Unit <router_fifo> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 7-bit addsub                                          : 1
+# Counters                                             : 2
+ 5-bit up counter                                      : 2
+# Registers                                            : 167
+ Flip-Flops                                            : 167
+# Comparators                                          : 4
+ 1-bit comparator not equal                            : 1
+ 4-bit comparator equal                                : 1
+ 5-bit comparator equal                                : 1
+ 5-bit comparator lessequal                            : 1
+# Multiplexers                                         : 162
+ 1-bit 16-to-1 multiplexer                             : 9
+ 1-bit 2-to-1 multiplexer                              : 151
+ 6-bit 16-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <resetn_clock_DFF_159> in Unit <router_fifo> is equivalent to the following 7 FFs/Latches, which will be removed : <resetn_clock_DFF_158> <resetn_clock_DFF_162> <resetn_clock_DFF_160> <resetn_clock_DFF_161> <resetn_clock_DFF_165> <resetn_clock_DFF_163> <resetn_clock_DFF_164> 
+WARNING:Xst:2042 - Unit router_fifo: 8 internal tristates are replaced by logic (pull-up yes): N10, N11, N12, N5, N6, N7, N8, N9.
+
+Optimizing unit <router_fifo> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block router_fifo, actual ratio is 4.
+FlipFlop rd_ptr_1 has been replicated 2 time(s)
+FlipFlop rd_ptr_2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 173
+ Flip-Flops                                            : 173
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : router_fifo.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 316
+#      INV                         : 2
+#      LUT2                        : 6
+#      LUT3                        : 7
+#      LUT4                        : 5
+#      LUT5                        : 25
+#      LUT6                        : 228
+#      MUXF7                       : 29
+#      MUXF8                       : 14
+# FlipFlops/Latches                : 173
+#      FD                          : 1
+#      FDR                         : 153
+#      FDRE                        : 19
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 23
+#      IBUF                        : 13
+#      OBUF                        : 2
+#      OBUFT                       : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             173  out of  18224     0%  
+ Number of Slice LUTs:                  273  out of   9112     2%  
+    Number used as Logic:               273  out of   9112     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    275
+   Number with an unused Flip Flop:     102  out of    275    37%  
+   Number with an unused LUT:             2  out of    275     0%  
+   Number of fully used LUT-FF pairs:   171  out of    275    62%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of    232    10%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 173   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.990ns (Maximum Frequency: 166.945MHz)
+   Minimum input arrival time before clock: 6.885ns
+   Maximum output required time after clock: 7.662ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 5.990ns (frequency: 166.945MHz)
+  Total number of paths / destination ports: 4142 / 192
+-------------------------------------------------------------------------
+Delay:               5.990ns (Levels of Logic = 3)
+  Source:            rd_ptr_3 (FF)
+  Destination:       count_1 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: rd_ptr_3 to count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            17   0.525   1.437  rd_ptr_3 (rd_ptr_3)
+     LUT4:I1->O           11   0.235   1.039  full_SW0 (N6)
+     LUT6:I5->O           12   0.254   1.069  empty5 (empty_OBUF)
+     LUT5:I4->O            6   0.254   0.875  _n0228_inv11 (_n0228_inv1)
+     FDRE:CE                   0.302          count_1
+    ----------------------------------------
+    Total                      5.990ns (1.570ns logic, 4.420ns route)
+                                       (26.2% logic, 73.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 823 / 345
+-------------------------------------------------------------------------
+Offset:              6.885ns (Levels of Logic = 2)
+  Source:            soft_reset (PAD)
+  Destination:       count_1 (FF)
+  Destination Clock: clock rising
+
+  Data Path: soft_reset to count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           150   1.328   2.471  soft_reset_IBUF (soft_reset_IBUF)
+     LUT2:I0->O          164   0.250   2.377  Mcount_rd_ptr_val1 (Mcount_rd_ptr_val)
+     FDRE:R                    0.459          rd_ptr_0
+    ----------------------------------------
+    Total                      6.885ns (2.037ns logic, 4.848ns route)
+                                       (29.6% logic, 70.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 36 / 10
+-------------------------------------------------------------------------
+Offset:              7.662ns (Levels of Logic = 3)
+  Source:            rd_ptr_3 (FF)
+  Destination:       full (PAD)
+  Source Clock:      clock rising
+
+  Data Path: rd_ptr_3 to full
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            17   0.525   1.437  rd_ptr_3 (rd_ptr_3)
+     LUT4:I1->O           11   0.235   1.039  full_SW0 (N6)
+     LUT6:I5->O           19   0.254   1.260  full (full_OBUF)
+     OBUF:I->O                 2.912          full_OBUF (full)
+    ----------------------------------------
+    Total                      7.662ns (3.926ns logic, 3.736ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    5.990|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.60 secs
+ 
+--> 
+
+
+Total memory usage is 386448 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

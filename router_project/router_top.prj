@@ -1,0 +1,5 @@
+verilog work "../RTL/router_sync.v"
+verilog work "../RTL/router_reg.v"
+verilog work "../RTL/router_fsm.v"
+verilog work "../RTL/router_fifo.v"
+verilog work "../RTL/router_top.v"

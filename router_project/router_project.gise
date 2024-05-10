@@ -22,7 +22,28 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="router_project.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name=".prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name=".stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name=".xst"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="router_fifo.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="router_fifo.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="router_fifo.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="router_fifo.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="router_fifo.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="router_fifo.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="router_fifo.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="router_fifo.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="router_fifo_envsettings.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="router_fifo_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="router_fifo_summary.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="router_fifo_tb_isim_beh.exe"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="router_fifo_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="router_fifo_xst.xrpt"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="router_fsm.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="router_fsm.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="router_fsm.ngc"/>
@@ -31,54 +52,169 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="router_fsm.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="router_fsm.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="router_fsm.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="router_fsm_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="router_fsm_summary.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="router_fsm_tb_isim_beh.exe"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="router_fsm_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="router_fsm_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="router_reg.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="router_reg.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="router_reg.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="router_reg.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="router_reg.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="router_reg.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="router_reg.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="router_reg.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="router_reg_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="router_reg_summary.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="router_reg_tb_isim_beh.exe"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="router_reg_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="router_reg_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="router_sync.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="router_sync.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="router_sync.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="router_sync.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="router_sync.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="router_sync.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="router_sync.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="router_sync.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="router_sync_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="router_sync_summary.html"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="router_sync_tb_isim_beh.exe"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="router_sync_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="router_sync_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="router_top.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="router_top.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="router_top.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="router_top.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="router_top.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="router_top.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="router_top.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="router_top.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="router_top_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="router_top_summary.html"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="router_top_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="router_top_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="router_top_tb_isim_beh.wdb"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="router_top_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="router_top_xst.xrpt"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1714885144" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1714885144">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1715250373" xil_pn:in_ck="-7589849807698883123" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1715250373">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../RTL/router_fifo.v"/>
+      <outfile xil_pn:name="../RTL/router_fsm.v"/>
+      <outfile xil_pn:name="../RTL/router_reg.v"/>
+      <outfile xil_pn:name="../RTL/router_sync.v"/>
+      <outfile xil_pn:name="../RTL/router_top.v"/>
+      <outfile xil_pn:name="../TB/router_fifo_tb.v"/>
+      <outfile xil_pn:name="../TB/router_fsm_tb.v"/>
+      <outfile xil_pn:name="../TB/router_reg_tb.v"/>
+      <outfile xil_pn:name="../TB/router_sync_tb.v"/>
+      <outfile xil_pn:name="../TB/router_top_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1715250857" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5441337016619861183" xil_pn:start_ts="1715250857">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1715250857" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1810699106455045507" xil_pn:start_ts="1715250857">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1715181429" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4060812882694319786" xil_pn:start_ts="1715181429">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1715250373" xil_pn:in_ck="-7589849807698883123" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1715250373">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="../RTL/router_fifo.v"/>
+      <outfile xil_pn:name="../RTL/router_fsm.v"/>
+      <outfile xil_pn:name="../RTL/router_reg.v"/>
+      <outfile xil_pn:name="../RTL/router_sync.v"/>
+      <outfile xil_pn:name="../RTL/router_top.v"/>
+      <outfile xil_pn:name="../TB/router_fifo_tb.v"/>
+      <outfile xil_pn:name="../TB/router_fsm_tb.v"/>
+      <outfile xil_pn:name="../TB/router_reg_tb.v"/>
+      <outfile xil_pn:name="../TB/router_sync_tb.v"/>
+      <outfile xil_pn:name="../TB/router_top_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1715251639" xil_pn:in_ck="-7589849807698883123" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1529100243724122365" xil_pn:start_ts="1715251638">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="router_top_tb_beh.prj"/>
+      <outfile xil_pn:name="router_top_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1715251639" xil_pn:in_ck="-7994410737815678177" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3555317193797815968" xil_pn:start_ts="1715251639">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="router_top_tb_isim_beh.wdb"/>
+    </transform>
     <transform xil_pn:end_ts="1714819110" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1714819110">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1714819110" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-9125400171493850917" xil_pn:start_ts="1714819110">
+    <transform xil_pn:end_ts="1715181333" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="9176476288729461096" xil_pn:start_ts="1715181333">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1714819110" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-4061457145696803095" xil_pn:start_ts="1714819110">
+    <transform xil_pn:end_ts="1715181333" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-4060812882694319786" xil_pn:start_ts="1715181333">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1714819110" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1714819110">
+    <transform xil_pn:end_ts="1715181333" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1715181333">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1714819110" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="8856640824675101533" xil_pn:start_ts="1714819110">
+    <transform xil_pn:end_ts="1715181333" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="8711773211188861930" xil_pn:start_ts="1715181333">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1714819110" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1714819110">
+    <transform xil_pn:end_ts="1715181333" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1715181333">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1714819110" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="9174245770076008051" xil_pn:start_ts="1714819110">
+    <transform xil_pn:end_ts="1715181333" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="9174890033078491360" xil_pn:start_ts="1715181333">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1714819116" xil_pn:in_ck="92700978848670327" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-1791411427166731496" xil_pn:start_ts="1714819110">
+    <transform xil_pn:end_ts="1715181345" xil_pn:in_ck="7704514148579699400" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="8731224603093112805" xil_pn:start_ts="1715181333">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="router_fsm.lso"/>
-      <outfile xil_pn:name="router_fsm.ngc"/>
+      <outfile xil_pn:name="router_fifo.ngr"/>
       <outfile xil_pn:name="router_fsm.ngr"/>
-      <outfile xil_pn:name="router_fsm.prj"/>
-      <outfile xil_pn:name="router_fsm.stx"/>
-      <outfile xil_pn:name="router_fsm.syr"/>
-      <outfile xil_pn:name="router_fsm.xst"/>
-      <outfile xil_pn:name="router_fsm_xst.xrpt"/>
+      <outfile xil_pn:name="router_reg.ngr"/>
+      <outfile xil_pn:name="router_sync.ngr"/>
+      <outfile xil_pn:name="router_top.lso"/>
+      <outfile xil_pn:name="router_top.ngc"/>
+      <outfile xil_pn:name="router_top.ngr"/>
+      <outfile xil_pn:name="router_top.prj"/>
+      <outfile xil_pn:name="router_top.stx"/>
+      <outfile xil_pn:name="router_top.syr"/>
+      <outfile xil_pn:name="router_top.xst"/>
+      <outfile xil_pn:name="router_top_tb_stx_beh.prj"/>
+      <outfile xil_pn:name="router_top_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>

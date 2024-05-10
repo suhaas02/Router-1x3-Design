@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/router_fifo.xst" -ofn "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/router_fifo.syr" 
+xst -intstyle ise -ifn "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/router_fifo.xst" -ofn "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/router_fifo.syr" 

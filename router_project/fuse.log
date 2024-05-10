@@ -1,0 +1,30 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/router_top_tb_isim_beh.exe" -prj "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/router_top_tb_beh.prj" "work.router_top_tb" "work.glbl" 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/../RTL/router_sync.v" into library work
+Analyzing Verilog file "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/../RTL/router_reg.v" into library work
+Analyzing Verilog file "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/../RTL/router_fsm.v" into library work
+Analyzing Verilog file "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/../RTL/router_fifo.v" into library work
+Analyzing Verilog file "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/../RTL/router_top.v" into library work
+Analyzing Verilog file "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/../TB/router_top_tb.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 82872 KB
+Fuse CPU Usage: 520 ms
+Compiling module router_fifo
+Compiling module router_sync
+Compiling module router_fsm
+Compiling module router_reg
+Compiling module router_top
+Compiling module router_top_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 7 Verilog Units
+Built simulation executable /home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/router_top_tb_isim_beh.exe
+Fuse Memory Usage: 1168320 KB
+Fuse CPU Usage: 560 ms
+GCC CPU Usage: 150 ms

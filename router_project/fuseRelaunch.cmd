@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/router_top_tb_isim_beh.exe" -prj "/home/suhaas/Documents/Verilog_labs/Router-1x3-Design/router_project/router_top_tb_beh.prj" "work.router_top_tb" "work.glbl" 

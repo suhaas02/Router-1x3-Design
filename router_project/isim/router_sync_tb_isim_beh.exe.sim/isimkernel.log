@@ -1,0 +1,29 @@
+Command line:
+   router_sync_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  48609
+
+Thu May  9 16:01:18 2024
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 183.976 Meg
+
+ Total Signals          : 38
+ Total Nets             : 38
+ Total Signal Drivers   : 27
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 36
+ Total Traceable Variables  : 41
+ Total Scalar Nets and Variables : 157
+Total Line Count : 124
+
+ Total Simulation Time: 0.06 sec
+
+ Current Memory Usage: 259.478 Meg
+
+Thu May  9 16:04:05 2024
+

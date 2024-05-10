@@ -83,7 +83,7 @@ endtask
 
 task write();
     reg[7:0]payload_data;
-	reg[5:0]payload_len;
+	  reg[5:0]payload_len;
      begin
      @(negedge clock);
      payload_len=6'd14;
@@ -113,7 +113,7 @@ task write();
 task read;
     begin 
       @(negedge clock)
-            read_enb = 1'b1;
+        read_enb = 1'b1;
     end 
 endtask
 
@@ -129,10 +129,6 @@ for(k = 0; k < 16; k = k + 1)
     begin 
         read;
     end
-// read;
-// read_enb = 0;
-
-
-#250 $finish;
+#150 $finish;
 end
 endmodule
